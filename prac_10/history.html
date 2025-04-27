@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block title %}Search History{% endblock %}
+{% block content %}
+<h1>Search History</h1>
+
+{% if search_history %}
+    <ul>
+    {% for term in search_history %}
+        <li>{{ term }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No search history</p>
+{% endif %}
+
+{% endblock %}
